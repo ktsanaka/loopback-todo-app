@@ -1,4 +1,4 @@
-# StrongLoop Todo App
+# LoopBack Todo App with Docker
 
 ### 1. Build the Docker-Image
 ```sh
