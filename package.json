@@ -1,5 +1,5 @@
 {
-  "name": "helloworld",
+  "name": "todo",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -25,5 +25,5 @@
     "type": "",
     "url": ""
   },
-  "description": "helloworld"
+  "description": "todo"
 }
