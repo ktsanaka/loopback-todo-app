@@ -8,7 +8,7 @@ MAINTAINER Konstantinos TSANAKAS <konstantinos.tsanakas@soprasteria.com>
 RUN apt-get update
 
 # Install node.js
-RUN apt-get -y install nodejs nodejs-legacy npm
+RUN apt-get -y install nodejs nodejs-legacy npm mysql-server
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 
@@ -30,4 +30,4 @@ RUN npm install
 EXPOSE 3000 3001
 
 # Run the arc
-CMD PORT=3001 slc arc
+CMD service mysql start && mysql < db.sql && PORT=3001 slc arc
