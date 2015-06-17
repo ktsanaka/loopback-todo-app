@@ -11,6 +11,9 @@ docker run -d -p 3000:3000 -p 3001:3001 ktsanaka/strongloop
 ```
 
 ### 3. Run App Controller with arc interface
+```sh
+http://192.168.59.103:3001
+```
 
 ### 4. Open client in browser
 ```sh
