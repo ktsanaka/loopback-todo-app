@@ -1,0 +1,27 @@
+<ion-view view-title="Ionic Todo App" ng-init="init()">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate" ng-repeat="todo in todos" type="item-text-wrap" ng-click="switch(todo)">
+                <i class="icon ion-ios-circle-outline myCheckbox positiv" ng-show="!todo.done"></i>
+                <i class="icon ion-ios-checkmark myCheckbox positiv" ng-show="todo.done"></i> {{todo.name}}
+                <ion-option-button class="button-assertive" ng-click="remove(todo)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <br>
+        <ion-list>
+            <ion-item class="item-divider">
+                New TODO
+            </ion-item>
+            <ion-item class="item-input">
+                <input type="text" placeholder="Task" ng-model="todo.name">
+            </ion-item>
+        </ion-list>
+        <div class="padding">
+            <button class="button button-full button-positive" ng-click="add()">
+                Save
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
