@@ -33,7 +33,7 @@
     "public": false
   },
   "todo": {
-    "dataSource": "db",
+    "dataSource": "todo",
     "public": true,
     "$promise": {},
     "$resolved": true
