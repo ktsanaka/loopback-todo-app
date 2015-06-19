@@ -1,15 +1,15 @@
 {
-    "db": {
-        "name": "db",
-        "connector": "memory"
-    },
-    "todo": {
-        "host": "localhost",
-        "port": 3306,
-        "database": "todo",
-        "password": "",
-        "name": "todo",
-        "user": "root",
-        "connector": "mysql"
-    }
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "todo": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "todo",
+    "password": "",
+    "name": "todo",
+    "user": "root",
+    "connector": "mysql"
+  }
 }

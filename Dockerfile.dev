@@ -16,18 +16,15 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN npm install -g strongloop
 
 # Copy LoopBack Projekt
-ADD https://github.com/ktsanaka/loopback-todo-app/archive/master.tar.gz /
-RUN tar xf master.tar.gz
-RUN mv loopback-todo-app-master/ app-server/
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN mkdir -p /app-server
 
 # Set workdir
 WORKDIR /app-server
 
-# Install npm dependencies
-RUN npm install
-
 # Expose the ports
-EXPOSE 3000
+EXPOSE 3000 3001
 
 # Run the arc
-CMD service mysql start && mysql < db.sql && node .
+#CMD service mysql start && mysql < db.sql && cp -a /tmp/node_modules /app-server && PORT=3001 slc arc
